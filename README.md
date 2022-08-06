@@ -20,7 +20,7 @@ silinmez.
 
 ### Projeyi terminal üzerinden indirmek için
 ```
-https://github.com/onrcan34/nodeJS-express-fetch-mongodb-uygulamasi.git
+git clone https://github.com/onrcan34/nodeJS-express-fetch-mongodb-uygulamasi.git
 ```
 ![image](https://user-images.githubusercontent.com/64845818/183238138-9e5d453a-25d8-48b2-aac5-2b321be67c2f.png)
 
