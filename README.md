@@ -46,10 +46,10 @@ node app.js
 
 ```
 Görüldüğü gibi sunucu 3000 portunu gelebilecek herhangi bir http isteğine response (cevap) göndermek
-için dinler. Program ilk kez çalıştırıldığında mongodb üzerinde country isimli database yoksa bu veritabanını ve 
-onun "info" isminde bir collection nunu oluşturur, validation (doğrulama) işlemleri için de bir validatation
-scheması tanımlar. Son olarak fetch ile ücretsiz bir api kaynağından ( https://restcountries.com/v3.1/all ) 
-ülke verilerini almak için get işlemi yapar.
+için dinler. Program ilk kez çalıştırıldığında mongodb üzerinde country isimli database yoksa bu 
+veritabanını ve onun "info" isminde bir collection nunu oluşturur, validation (doğrulama) işlemleri için de 
+bir validatation scheması tanımlar. Son olarak fetch ile ücretsiz bir api (https://restcountries.com/v3.1/all)   
+kaynağından ülke verilerini almak için get işlemi yapar.
 ```
 
 ![image](https://user-images.githubusercontent.com/64845818/183238471-5ab19db9-8974-473e-8112-0c3a488bae1a.png)
@@ -66,9 +66,9 @@ mongoDB Compass veritabanı validation (doğrulama) işlemleri
 
 
 ```
-Program ikince kez çalıştırıldığında, ilk olarak proje dizininde country isimli database var mı diye kontrol işlemi
-işlemi yapar. Eğer aynı isimde db varsa yeni database oluşturmaz. Bu db üzerinden işlemlere devam eder. Böylelikle
-veriler kalıcı ve tutarlı olur.
+Program ikince kez çalıştırıldığında, ilk olarak proje dizininde country isimli database var mı diye 
+kontrol işlemi işlemi yapar. Eğer aynı isimde db varsa yeni database oluşturmaz. Bu db üzerinden işlemlere devam 
+eder. Böylelikle veriler kalıcı ve tutarlı olur.
 
 ```
 ![image](https://user-images.githubusercontent.com/64845818/183238597-bd49dd69-ef1a-4612-b008-08cc8823aa3e.png)
@@ -108,9 +108,9 @@ bulunan ülkerin nüfus (population) sayılarına göre azdan çoğa doğru sır
 
 ### localhost:3000/country/{countryName} get isteğinde bulunmak
 ```
-localhost:/3000/country/pakistan adresine http get isteği yapıldığında, pakistan ülkesi veritabanında var mı diye kontrol eder.
-pakistan ismine sahip ülke varsa db den bu veri alınır ve tarayıcıya response edilir. Ayrıca konsol
-ekranında, "Pakistan ülke bilgisi görüntüleniyor..." şeklinde bilgi mesajı verilir.
+localhost:/3000/country/pakistan adresine http get isteği yapıldığında, pakistan ülkesi veritabanında var 
+mı diye kontrol eder. pakistan ismine sahip ülke varsa db den bu veri alınır ve tarayıcıya response edilir. 
+Ayrıca konsol ekranında, "Pakistan ülke bilgisi görüntüleniyor..." şeklinde bilgi mesajı verilir.
 ```
 
 ![p4_Send](https://user-images.githubusercontent.com/64845818/183241584-ed2a3695-f255-4b08-b0e9-ddb3ea13a706.png)
@@ -152,9 +152,9 @@ tarayıcıya response edilir. Ayrıca konsol ekranına, "Portugal ülkesi silind
 
 ```
 Eğer portugal isminde bir veri, veritabanında bulunmuyorsa "Portugal ülkesi listede bulunamadı!" şeklinde 
-konsola ve tarayıcıya bilgilendirme mesajı yazar. Bir önceki adımda portugal verisi delete isteği ile silindi. Bu sebeple
-Portugal verisine tekrardan delete isteği yapıldığında, veri database de bulunmadığından silme işlemi
-gerçekleşmez.
+konsola ve tarayıcıya bilgilendirme mesajı yazar. Bir önceki adımda portugal verisi delete isteği ile 
+silindi. Bu sebeple Portugal verisine tekrardan delete isteği yapıldığında, veri database de bulunmadığından 
+silme işlemi gerçekleşmez.
 ```
 
 ![p9_Send](https://user-images.githubusercontent.com/64845818/183247174-5de40299-d3ce-4f45-afaa-4eebe7aa700d.png)
