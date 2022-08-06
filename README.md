@@ -14,6 +14,7 @@ silinmez.
 | ------ | ------ |
 | node module | https://nodejs.org/en/download/ |
 | mongodb | https://www.mongodb.com/try/download/community |
+| postman | https://www.postman.com/downloads/ |
 | all npm packages | npm install |
 
 # Installing - Kurulum
@@ -107,7 +108,7 @@ bulunan ülkerin nüfus (population) sayılarına göre azdan çoğa doğru sır
 
 ### localhost:3000/country/{countryName} get isteğinde bulunmak
 ```
-localhost:/3000/country/pakistan http get isteği yapıldığında, pakistan ülkesi veritabanında var mı diye kontrol eder.
+localhost:/3000/country/pakistan adresine http get isteği yapıldığında, pakistan ülkesi veritabanında var mı diye kontrol eder.
 pakistan ismine sahip ülke varsa db den bu veri alınır ve tarayıcıya response edilir. Ayrıca konsol
 ekranında, "Pakistan ülke bilgisi görüntüleniyor..." şeklinde bilgi mesajı verilir.
 ```
@@ -115,17 +116,30 @@ ekranında, "Pakistan ülke bilgisi görüntüleniyor..." şeklinde bilgi mesaj�
 ![p4_Send](https://user-images.githubusercontent.com/64845818/183241584-ed2a3695-f255-4b08-b0e9-ddb3ea13a706.png)
 
 
-### localhost:3000/player post isteğinde bulunmak (postman işlemleri)
+### localhost:3000/country post isteğinde bulunmak ( postman uygulaması gereklidir )
 ```
-Post isteğinde bulunmak için postman uygulaması kullanılmıştır. 
+localhost:3000/country adresine http post isteği yapıldığında, veritabanına kaydetmek istenen veriler
+ilk önce mongodb nin validation işlemlerinden geçer. Bir hata tespit edilirse veri eklenmez ve hata mesajı
+iletilir. Eğer bir sorun tespit edilmezse veriler mongoDB içerisinde yer alan country veritabanın info
+collectionuna kaydedilir.
 ```
-https://www.postman.com/downloads/
-![img2](https://user-images.githubusercontent.com/64845818/182619068-f08e5d59-d0d5-4f86-9e6d-259d24a139d5.png)
+
+![p5_Send](https://user-images.githubusercontent.com/64845818/183245988-7f77974c-18da-4eb7-8a24-0b26ec760406.png)
 
 ```
-istek sonucundan response olarak gönderilen veri aşağıdaki gibidir.
+Post işleminde bir sorun olmazsa veri başarılı şekilde db ye kaydedilir. Yukarıda post edilen "newcountry"
+ülkesinin veritabınında var mı diye kontrolü sonucunda veri başarılı bir şekilde response edilmiştir.
 ```
-![img3](https://user-images.githubusercontent.com/64845818/182619546-223e07dd-43cc-4bff-9a3d-c862d3956b19.PNG)
+
+![p6_Send](https://user-images.githubusercontent.com/64845818/183246052-0ab815aa-1cb3-4f18-892e-8735779b4e22.png)
+
+```
+Post işleminde bir sorun olursa veri db ye kaydedilmez. Sorunun hangi hatadan kaynaklandığını kullanıcıya
+göstermek için hata mesajı konsol ekranına yazdırılır ve tarayıcıya response edilir.
+```
+
+![p7_Send](https://user-images.githubusercontent.com/64845818/183246127-109ae85e-3344-4b5c-b8bb-96c8ed2bcb24.png)
+
 
 ### localhost:3000/player/3 delete isteğinde bulunmak
 ```
