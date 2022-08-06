@@ -31,14 +31,14 @@ cd nodeJS-express-fetch-mongodb-uygulamasi
 ```
 ![image](https://user-images.githubusercontent.com/64845818/183238157-11d237db-8671-45c7-b995-8f57240cc90c.png)
 
-### tüm paketleri tek seferde kurmak için
+### Tüm paketleri tek seferde kurmak için
 ```
 npm i
 ```
 ![image](https://user-images.githubusercontent.com/64845818/183238232-175209ae-2cab-41b5-a612-cd742d55fcc4.png)
 
 
-### Konsol uygulamamızı çalıştırmak için
+### Uygulamayı çalıştırmak için
 ```
 node app.js 
 ```
@@ -141,47 +141,32 @@ göstermek için hata mesajı konsol ekranına yazdırılır ve tarayıcıya res
 ![p7_Send](https://user-images.githubusercontent.com/64845818/183246127-109ae85e-3344-4b5c-b8bb-96c8ed2bcb24.png)
 
 
-### localhost:3000/player/3 delete isteğinde bulunmak
+### localhost:3000/country/{countryName} delete isteğinde bulunmak
 ```
-localhost:3000/player/3 url adresine delete işlemi uygulandığında parametre olarak verilen 3 değeri 
-footballer.json dosyasında var mı diye kontrol edilir eğer varsa bu id ye sahip değer footballer diziden
-silinir. Eğer bu id ye sahip değer bulunmuyorsa "X id li futbolcu dizide bulunamamıştır!" şeklinde
-hem konsola hem de tarayıcıya uyarı mesajı gönderir.
-```
-
-```
-localhost:3000/player/3 isteği sonucu 3 id li değer footballer.json dosyasında varsa 
-aşağıdaki response döner.
-```
-![img4](https://user-images.githubusercontent.com/64845818/182622889-e979f6c4-32a0-4995-b6e3-6231877e6db8.PNG)
-
-```
-localhost:3000/player/25 isteği sonucu 25 id li değer footballer.json dosyasında bulunamadıysa
-aşağıdaki response döner.
-```
-![img5](https://user-images.githubusercontent.com/64845818/182624216-fe10a45d-a098-413c-a82e-fa04ca6e14a7.PNG)
-
-### localhost:3000/player/1 put isteğinde bulunmak
-```
-localhost:3000/player/1 url adresine put isteği yapıldığında parametre olarak verilen 1 değeri 
-footballer.json dosyasında var mı diye kontrol edilir eğer varsa bu id ye sahip değer üzerinde güncelleme
-işlemi yapılır.
+localhost:/3000/country/portugal adresine http delete isteği yapıldığında, portekiz ülkesi veritabanında 
+var mı diye kontrol edilir. portugal ismine sahip ülke varsa db den bu veri silinir ve güncellenen veritabanı
+tarayıcıya response edilir. Ayrıca konsol ekranına, "Portugal ülkesi silindi" şeklinde bilgi mesajı verilir.
 ```
 
-![img6](https://user-images.githubusercontent.com/64845818/182629803-3e686f89-3c95-4b1e-82df-bee0d85b4618.PNG)
+![p8_Send](https://user-images.githubusercontent.com/64845818/183247021-0940af74-6415-4068-91c4-73af6861de6b.png)
 
 ```
-localhost:3000/player/1 isteği sonucu 1 id li değer footballer.json dosyasında varsa ve güncellenecek 
-değerlerde herhangi bir hata tespit edilmediyse aşağıdaki response döner.
+Eğer portugal isminde bir veri, veritabanında bulunmuyorsa "Portugal ülkesi listede bulunamadı!" şeklinde 
+konsola ve tarayıcıya bilgilendirme mesajı yazar. Bir önceki adımda portugal verisi delete isteği ile silindi. Bu sebeple
+Portugal verisine tekrardan delete isteği yapıldığında, veri database de bulunmadığından silme işlemi
+gerçekleşmez.
 ```
 
-![img9](https://user-images.githubusercontent.com/64845818/182630265-4016d5d7-646d-44f6-a673-8e30caebde59.PNG)
+![p9_Send](https://user-images.githubusercontent.com/64845818/183247174-5de40299-d3ce-4f45-afaa-4eebe7aa700d.png)
 
+
+### localhost:3000/home/contact geçersiz bir istekte bulunmak
 ```
-localhost:3000/player/1 isteği sonucu 1 id li değer footballer.json dosyasında varsa ve güncellenecek 
-değerlerde herhangi bir hata tespit edildiyse aşağıdaki response döner.
+Eğer tanımlananlar dışında url e bir istek yapılırsa bu tespit edilir ve "Geçersiz bir istek yapılmıştır" 
+şeklinde uyarı mesajını hem konsol ekranına hemde tarayıcıya response eder.
 ```
-![img7](https://user-images.githubusercontent.com/64845818/182631028-749385c3-d999-49df-add2-6e065a68e1de.PNG)
+
+![p10_Send](https://user-images.githubusercontent.com/64845818/183247278-6d2cf7d8-fd1d-4d99-8d38-088f8bb493d1.png)
 
 
 
