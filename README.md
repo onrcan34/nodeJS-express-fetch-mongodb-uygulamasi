@@ -54,6 +54,17 @@ scheması tanımlar. Son olarak fetch ile ücretsiz bir api kaynağından ( http
 ![image](https://user-images.githubusercontent.com/64845818/183238471-5ab19db9-8974-473e-8112-0c3a488bae1a.png)
 
 ```
+mongoDB Compass veritabanı gösterimi 
+```
+![p0_Send](https://user-images.githubusercontent.com/64845818/183240884-3d736014-70f6-47c4-902f-93d6753caee1.png)
+
+```
+mongoDB Compass veritabanı validation (doğrulama) işlemleri 
+```
+![p00_Send](https://user-images.githubusercontent.com/64845818/183240908-cbb762f8-1e21-4652-be31-cf3a899be561.png)
+
+
+```
 Program ikince kez çalıştırıldığında, ilk olarak proje dizininde country isimli database var mı diye kontrol işlemi
 işlemi yapar. Eğer aynı isimde db varsa yeni database oluşturmaz. Bu db üzerinden işlemlere devam eder. Böylelikle
 veriler kalıcı ve tutarlı olur.
@@ -94,20 +105,21 @@ bulunan ülkerin nüfus (population) sayılarına göre azdan çoğa doğru sır
 ![p3_Send](https://user-images.githubusercontent.com/64845818/183239761-1d926825-b027-44d5-8bbf-353d01744008.png)
 
 
-### localhost:3000/player get isteğinde bulunmak
+### localhost:3000/country/{countryName} get isteğinde bulunmak
 ```
-localhost:/3000/player http get isteği yapıldığında aşağıdaki gibi bir sonuç döner. Buradaki get isteği 
-"Getting Started" bölümünde bahsedilen postman uygulaması ile yapılır. Uygulamayı aşağıdaki linkden
-indirip kurabilirsiniz
+localhost:/3000/country/pakistan http get isteği yapıldığında, pakistan ülkesi veritabanında var mı diye kontrol eder.
+pakistan ismine sahip ülke varsa db den bu veri alınır ve tarayıcıya response edilir. Ayrıca konsol
+ekranında, "Pakistan ülke bilgisi görüntüleniyor..." şeklinde bilgi mesajı verilir.
 ```
-https://www.postman.com/downloads/
 
-![img1](https://user-images.githubusercontent.com/64845818/182615942-2bc66f33-be9e-441e-bdc2-6903e79ec779.png)
+![p4_Send](https://user-images.githubusercontent.com/64845818/183241584-ed2a3695-f255-4b08-b0e9-ddb3ea13a706.png)
 
-### localhost:3000/player post isteğinde bulunmak
+
+### localhost:3000/player post isteğinde bulunmak (postman işlemleri)
 ```
 Post isteğinde bulunmak için postman uygulaması kullanılmıştır. 
 ```
+https://www.postman.com/downloads/
 ![img2](https://user-images.githubusercontent.com/64845818/182619068-f08e5d59-d0d5-4f86-9e6d-259d24a139d5.png)
 
 ```
